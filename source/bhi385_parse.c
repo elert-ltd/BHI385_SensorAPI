@@ -76,7 +76,7 @@ static void time_to_s_ns(uint64_t time_ticks, uint32_t *s, uint32_t *ns, uint64_
 * @param[in] byte2         : Byte 2 in meta event
 * @param[in] parse_table   : Pointer to parse table
 */
-static void parse_meta_event_sensor_status(char *event_text,
+static void parse_meta_event_sensor_status(const char *event_text,
                                            uint32_t s,
                                            uint32_t ns,
                                            uint8_t byte1,
@@ -111,7 +111,7 @@ static void parse_meta_event_sensor_status(char *event_text,
 static void parse_meta_event_extended(uint8_t meta_event_type,
                                       uint8_t byte1,
                                       uint8_t byte2,
-                                      char*event_text,
+                                      const char *event_text,
                                       uint32_t s,
                                       uint32_t ns)
 {
@@ -143,7 +143,7 @@ static void parse_meta_event_extended(uint8_t meta_event_type,
 * @param[in] parse_table   : Pointer to parse table
 */
 static void parse_meta_event_type(const struct bhi385_fifo_parse_data_info *callback_info,
-                                  char *event_text,
+                                  const char *event_text,
                                   uint32_t s,
                                   uint32_t ns,
                                   struct bhi385_parse_ref *parse_table)
@@ -814,7 +814,7 @@ void bhi385_parse_meta_event(const struct bhi385_fifo_parse_data_info *callback_
     struct bhi385_parse_ref *parse_table = (struct bhi385_parse_ref *)callback_ref;
     uint32_t s, ns;
     uint64_t tns;
-    char *event_text;
+    const char *event_text;
 
     if (!callback_info)
     {

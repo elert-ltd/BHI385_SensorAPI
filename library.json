@@ -1,0 +1,15 @@
+{
+    "name": "BHI385_SensorAPI",
+    "version": "2.1.0",
+    "description": "Bosch BHI385 Sensor API",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/elert-ltd/BHI385_SensorAPI.git"
+    },
+    "license": "BSD-3-Clause",
+    "build": {
+        "srcDir": "source",
+        "includeDir": "source",
+        "srcFilter": ["+<*.c>"]
+    }
+}
