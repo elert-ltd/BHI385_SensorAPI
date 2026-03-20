@@ -10,6 +10,7 @@
     "build": {
         "srcDir": "source",
         "includeDir": "source",
-        "srcFilter": ["+<*.c>"]
+        "srcFilter": ["+<*.c>"],
+        "flags": "-I."
     }
 }
